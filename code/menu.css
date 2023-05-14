@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* -------------------------- navbar ------------------------ */
+#navigation-bar{
+    height: 100px;
+    background-color: #047aed;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-around;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+#navigation-bar ul{
+    display: flex;
+    gap: 30px;
+}
+#navigation-bar h1{
+    font-size: 2.0rem;
+    color: white;
+    font-family: cursive;
+}
+#navigation-bar ul a{
+    font-size: 1.1rem;
+    color: white;
+    padding: 7px;
+    border-radius: 20px;
+}
+#navigation-bar ul a:hover{
+    border: 0;
+    border-bottom: 3px solid yellow;
+    font-weight: bold;
+}
+/* --------------top container------------------------ */
+.top-container {
+    height: auto;
+    display: grid;
+    overflow: hidden;
+    margin-bottom: 26px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "b1 b1 b2 b3"
+    "b1 b1 b4 b5"
+    "b6 b7 b8 b8"
+    "b9 b10 b8 b8";
+}
+.box{
+    transition: transform 0.5s;
+}
+.box:hover{
+    transform: scale(1.1);
+}
+.box-1 {
+    grid-area: b1;
+}
+
+.box-2 {
+    grid-area: b2;
+}
+
+.box-3 {
+    grid-area: b3;
+}
+.box-4 {
+    grid-area: b4;
+}
+
+.box-5 {
+    grid-area: b5;
+}
+
+.box-6 {
+    grid-area: b6;
+}
+
+.box-7 {
+    grid-area: b7;
+}
+
+.box-8 {
+    grid-area: b8;
+}
+
+.box-9 {
+    grid-area: b9;
+}
+
+.box-10 {
+    grid-area: b10;
+}
+/* -----------footer----------------- */
+footer{
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: white;
+    background-color: #047aed;
+}
+footer a{
+    font-size: 1.1rem;
+    color: white;
+    padding: 4px;
+    border-radius: 10px;
+}
+footer a:hover{
+    border: 0;
+    color:  yellow;
+    font-weight: bold;
+}
+/* -----------------animations-------------------------------- */
+@keyframes anime1 {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+@keyframes anime2 {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+/* ------------------media query section------------------------- */
+@media (max-width:801px){
+    .top-container { 
+        grid-template-rows: repeat(6,1fr);
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas:
+        "b1 b1"
+        "b2 b3"
+        "b4 b5"
+        "b8 b8"
+        "b6 b7"
+        "b9 b10";
+    }
+    .box{
+        height: 350px;
+    }
+}
+@media (max-width:601px){
+    footer h2{
+        font-size: 20px;
+    }
+}
+@media (max-width:586px){
+    .box{
+        height: 294px;
+    }
+}
+@media (max-width:551px){
+    .top-container { 
+        grid-template-rows: repeat(10,1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "b1"
+        "b2"
+        "b3"
+        "b4"
+        "b5"
+        "b6"
+        "b7"
+        "b8"
+        "b9"
+        "b10";
+    }
+    .box{
+        height: 405px;
+        animation-name: anime1;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+    .box-1 {
+        animation-name: anime2;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+            }
+    
+    .box-2 {
+        animation-name: anime1;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+            }
+    
+    .box-3 {
+        animation-name: anime2;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+            }
+    .box-4 {
+        animation-name: anime1;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+            }
+    
+    .box-5 {
+        animation-name: anime2;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+            }
+    
+    .box-6 {
+        animation-name: anime1;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+            }
+    
+    .box-7 {
+        animation-name: anime2;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+            }
+    
+    .box-8 {
+        animation-name: anime1;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+            }
+    
+    .box-9 {
+        animation-name: anime2;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+            }
+    
+    .box-10{ 
+    animation-name: anime1;
+        animation-duration: 1s;
+        animation-iteration-count: 1;       
+    }
+}
+@media (max-width:461px){
+    .box{
+        height: 370px;
+    }
+}
+@media (max-width:400px){
+    .box{
+        height: 321px;
+    }
+}

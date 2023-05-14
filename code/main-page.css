@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* ----------------------------------- navbar ------------------------ */
+#navigation-bar{
+    background-color: #047aed;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-around;
+    overflow: hidden;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+#navigation-bar .container{
+    display: flex;
+}
+#navigation-bar ul{
+    display: flex;
+    gap: 30px;
+}
+#navigation-bar h1{
+    font-size: 2.0rem;
+    color: white;
+    font-family: cursive;
+}
+#navigation-bar ul a{
+    font-size: 1.1rem;
+    color: white;
+    padding: 7px;
+    border-radius: 20px;
+}
+#navigation-bar ul a:hover{
+    border: 0;
+    border-bottom: 3px solid yellow;
+    font-weight: bold;
+}
+/* --------------------top container ------------------------ */
+#top-container{
+    height: 320px; 
+    color: white;
+    background-color: #047aed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    gap: 194px ;
+    align-content: stretch;
+    position: relative;
+    margin-bottom: 200px;
+}
+#top-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: -55px;
+    left: 0;
+    right: 0;
+    background-color:#047aed;
+    transform: skewY(-4deg);
+    z-index: -1;
+
+}
+#top-container .top-item{
+    /* border: 1px solid red; */
+    height: auto;
+    width: 450px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    animation-name: anime1;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+#top-container .top-item h1{
+    font-size: 2.9rem ;
+    margin: 10px 30px;
+}
+#top-container .top-item h4{
+    font-size: 1.1rem ;
+    margin-bottom: 10px;
+}
+#top-container .top-item .btn{
+    font-size: 1.1rem;
+    color: #047aed;
+    background-color: white;
+    padding: 3px;
+    border-radius: 10px;
+    font-weight:bolder;
+}
+#top-container .top-item .btn:hover{
+    color: white;
+    background-color: #047aed;
+    border: 0;
+    border-bottom: 3px solid yellow;
+    font-weight: bold;
+}
+#top-container .bottom-item{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow:  8px 8px 8px rgba(0, 0, 0, 0.7);
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    top: 80px;
+    animation-name: anime2;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+#top-container .bottom-item h1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    color: #047aed;
+}
+#top-container .bottom-item .form-controll{
+    margin: 10px 0px;
+}
+#top-container .bottom-item input{
+    width: 230px;
+    padding: 7px;
+    border: 0;
+    border-bottom: 1px solid grey;
+    outline: none;
+}
+#top-container .bottom-item input:hover{
+    border: none;
+    border-bottom: 2px solid black;
+}
+#top-container .bottom-item .btn{
+    font-size: 1.3rem;
+    color:  white;
+    background-color: #047aed;
+    padding: 8px;
+    border-radius: 10px;
+    font-weight:bolder;
+}
+#top-container .bottom-item .btn:hover{
+    color: #047aed;
+    background-color: white;
+    border: none;
+    border-bottom: 3px solid purple;
+}
+.trying{
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+}
+/* ---------------------------------top-container animations------------------------- */
+@keyframes anime1 {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes anime2 {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes anime3 {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes anime4 {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/* -------------title location container--------------- */
+#title-location-container{
+    background-color: #047aed;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#title-location-container h1{
+    font-size: 2rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* ---------------------location conatainer----------------------------------- */
+#location-container{
+    /* border: 2px solid black; */
+    margin: 10px 0px;
+    height: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.loc-container{
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.loc-container img{
+    border-radius: 20px;
+}
+.location-box-2{
+    padding: 50px;  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.loc-container h1{
+    font-size: 2.2rem;
+    color: #047aed;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.loc-container p{
+    font-size: 1.2rem;
+}
+.loc-container .btn{
+    color: white;
+    background-color: #047aed;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-family: monospace;
+}
+.loc-container .btn:hover{
+    border: none;
+    background-color: white;
+    color: #047aed;
+    border-bottom: 3px solid purple;
+}
+.location-box-4{
+    padding: 50px;  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.location-box-6{
+    padding: 50px;  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+/* -------------------------------footer----------------------------- */
+footer{
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: white;
+    background-color: #047aed;
+}
+footer a{
+    font-size: 1.1rem;
+    color: white;
+    padding: 4px;
+    border-radius: 10px;
+}
+footer a:hover{
+    border: 0;
+    color:  yellow;
+    font-weight: bold;
+}
+/* ---------------media queries for top containers ---------------*/
+@media (max-width : 1014px){
+    #top-container .top-item h4{
+        margin-left: 73px;
+    }
+    #top-container .top-item h1{
+        text-align: center;
+    }
+    #top-container .top-item .btn{
+        margin-left: 163px;
+    }
+    #top-container .bottom-item{
+        margin-right: 20px;
+    }
+}
+@media (max-width : 964px)
+{
+    #top-container {
+        gap: 34px;
+    }
+}
+@media (max-width : 911px)
+{
+    #top-container .bottom-item {
+        margin-right: 5px;
+    }
+    #location-container {
+        grid-template-rows: repeat(3,400px);
+    }
+    .loc-container p{
+        font-size: 17px;
+    }
+    .location-box-2{
+        gap: 5px;
+        padding: 15px;
+    }
+    .location-box-4{
+        gap: 5px;
+        padding: 15px;
+    }
+    .location-box-6{
+        gap: 5px;
+        padding: 15px;
+    }
+}
+@media (max-width : 789px){
+    #top-container .bottom-item{
+    top: 30px;
+    animation-name: anime4;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    }
+    #top-container .top-item{
+        animation-name: anime3;
+        animation-duration: 1s;
+        animation-iteration-count: 1;  
+    }
+    #top-container{
+        height: 501px;
+    }
+    #location-container{
+        grid-template-columns: none;
+        grid-template-rows: repeat(6,1fr);
+        height: 318vh;
+    }
+}
+@media (max-width:601px){
+    footer h2{
+        font-size: 20px;
+    }
+    footer a{
+        font-size: 15px;
+    }
+    footer{
+        gap: 2px;
+    }
+}
+@media (max-width : 522px){
+    #location-container {
+        gap: 0;
+    }
+    .loc-container h1{
+        font-size: 1.7rem;
+    }
+    .loc-container p{
+        font-size: 15px;
+    }
+    .loc-container .btn{
+        padding: 9px;
+        font-size: 1rem;
+    }
+}
+@media (max-width : 392px){
+    #top-container .top-item h4 {
+    margin-left: 27px;
+    }
+    #top-container .top-item .btn {
+        margin-left: 132px;
+    }
+}
